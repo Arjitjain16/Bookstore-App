@@ -1,0 +1,20 @@
+<%- include("./partials/header") %>
+
+<%- include("./partials/nav") %>
+
+<h1>welcome to books</h1>
+
+<form action="/create" method="post">
+    <input type="text" placeholder="Book name" name="bookname"><br> <br>
+    <input type="text" placeholder="Book price" name="bookprice"><br> <br>
+    <input type="text" placeholder="Author name" name="authorname"><br> <br>
+    <input type="text" placeholder="Book Quantity" name="bookquantity"><br> <br>
+    <input type="text" placeholder="Book Category" name="bookcategory"><br> <br>
+    <textarea name="description" cols="30" rows="10" placeholder="Book description"></textarea> <br> <br>
+    <button>Click here</button>
+</form>
+
+
+
+
+<%- include("./partials/footer") %>

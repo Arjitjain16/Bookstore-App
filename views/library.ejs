@@ -1,0 +1,10 @@
+<%- include("./partials/header") %>
+
+<%- include("./partials/nav") %>
+
+<% books.forEach((book) => { %>
+    <p><%= book.bookname %></p>
+<% }) %>
+
+
+<%- include("./partials/footer") %>
