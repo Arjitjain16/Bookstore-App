@@ -23,4 +23,8 @@ router.get('/readall', function(req, res, next) {
   res.render('library' , {books : BOOKS})
 });
 
+router.get('/bookstore', function(req, res, next) {
+  res.render('bookstore');
+});
+
 module.exports = router;
