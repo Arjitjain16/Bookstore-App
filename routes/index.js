@@ -23,6 +23,14 @@ router.get('/readall', function(req, res, next) {
   res.render('library' , {books : BOOKS})
 });
 
+/* GET Delete . */
+
+router.get('/delete/:index', function(req, res, next) {
+  BOOKS.splice(req.params.index,1)
+  res.redirect('/readall')
+});
+
+
 router.get('/bookstore', function(req, res, next) {
   res.render('bookstore');
 });

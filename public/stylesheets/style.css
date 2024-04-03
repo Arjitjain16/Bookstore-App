@@ -77,3 +77,9 @@ span{
   flex-direction: column;
 }
 
+/* -------------------library container------------------------------------ */
+
+.library-container{
+  height: 90%;
+  width: 100%;
+}

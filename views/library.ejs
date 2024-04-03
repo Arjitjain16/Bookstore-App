@@ -1,9 +1,13 @@
 <%- include("./partials/header") %>
 
-
-<% books.forEach((book) => { %>
-    <p><%= book.bookname %></p>
-<% }) %>
+<div class="library-container">
+    
+    <% books.forEach((book , index) => { %>
+        <p><%= book.bookname %></p>
+        <a href="/delete/<%= index  %>">delete</a> 
+        <a href="/update/<%= index %>">Update</a>
+    <% }) %>
+</div>
 
 
 <%- include("./partials/footer") %>
