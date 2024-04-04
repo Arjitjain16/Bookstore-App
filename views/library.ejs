@@ -4,6 +4,10 @@
     
     <% books.forEach((book , index) => { %>
         <p><%= book.bookname %></p>
+        <p><%= book.bookprice %></p>
+        <p><%= book.authorname %></p>
+        <p><%= book.bookquantity %></p>
+        <p><%= book.bookcategory %></p>
         <a href="/delete/<%= index  %>">delete</a> 
         <a href="/update/<%= index %>">Update</a>
     <% }) %>

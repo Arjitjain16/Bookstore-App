@@ -30,6 +30,14 @@ router.get('/delete/:index', function(req, res, next) {
   res.redirect('/readall')
 });
 
+// update 
+router.get('/update/:index', function(req, res, next) {
+  const i = req.params.index
+  const b = BOOKS[i]
+  res.render("update",{book : b , index : i})
+});
+
+
 
 router.get('/bookstore', function(req, res, next) {
   res.render('bookstore');
