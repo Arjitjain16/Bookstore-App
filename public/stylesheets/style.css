@@ -105,9 +105,33 @@ span{
 
 
 
+
+
 /* -------------------library container------------------------------------ */
+
+/* .library-container{
+  min-height: 100vh;
+  width: 100%;
+} */
+
 
 .library-container{
   height: 90%;
   width: 100%;
+  padding: 2vmax;
+  display: grid;
+  align-items: start;
+  flex-wrap: wrap;
+  gap: 2vmax;
+}
+
+.card{
+  height: 37vh;
+  width: 13vw;
+  background-color: aqua;
+  padding: 2vmax;
+  border-radius: 2vmax;
+}
+.card p{
+  font-size: 1.5vmax;
 }
