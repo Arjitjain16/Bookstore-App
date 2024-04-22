@@ -21,7 +21,6 @@ router.post('/create', upload, async function(req, res, next) {
     const newbook = new books({...req.body, image: req.file.filename})
     await newbook.save()
     res.redirect("/readall")
-   
   }
   catch(err){
     res.send(err)
