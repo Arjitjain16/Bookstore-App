@@ -25,27 +25,10 @@ router.post('/create', upload, async function(req, res, next) {
   catch(err){
     res.send(err)
   }
-  //--------------------------------
-  // BOOKS.push(req.body)
-  // res.redirect("/readall")
-  // then catch se -----------------------
-  // books.create(req.body).then(()=>{
-  //   res.redirect('/readall')
-  // }).catch((err)=> res.send(err))
-  //--------------using async and try catch-----------------
-
 });
 
 // read
 router.get('/readall', async function(req, res, next) {
-  // res.render(library)
-  // res.json(BOOKS)
-  //normal code
-  // res.render('library' , {books : BOOKS})
-  //
-  // books.find().then((books)=>{
-  //   res.render("library", {books : books})
-  // }).catch((err) => res.send(err))
   try {
     const findall = await books.find()
     res.render("library", {books : findall})
@@ -55,21 +38,14 @@ router.get('/readall', async function(req, res, next) {
 });
 
 /* GET Delete . */
-
-// router.get('/delete/:index', function(req, res, next) {
-//   BOOKS.splice(req.params.index,1)
-//   res.redirect('/readall')
-// });
-
-// -------------------------
 router.get('/delete/:id', async function(req,res,next){
   try {
     await books.findByIdAndDelete(req.params.id)
 
-    // fs.unlink(path.join(__dirname, "../" , "public", "images", books.image))
+    fs.unlink(path.join(__dirname, "../" , "public", "images", books.image))
 
     res.redirect('/readall')
-  }catch(error){
+   }catch(error){
     res.send(error)
   }
 })

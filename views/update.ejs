@@ -4,7 +4,7 @@
 <div class="update-container">
     <h1>Update Book</h1>
 
-    <form action="/update/<%= book._id %>" method="post">
+    <form action="/update/<%= book._id %>" method="post" enctype="multipart/form-data">
         <input type="text" placeholder="Book name" name="bookname" value="<%= book.bookname %>"><br> 
         <input type="text" placeholder="Book price" name="bookprice" value="<%= book.bookprice %>"><br> 
         <input type="text" placeholder="Author name" name="authorname" value="<%= book.authorname %>"><br>

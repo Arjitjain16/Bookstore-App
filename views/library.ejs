@@ -2,16 +2,19 @@
 
 <div class="library-container">
         <% books.forEach((book , index) => { %>
-            <div class="card">
-                <img src="/images/<%= book.image %>" alt="">
-                <p><%= book.bookname %></p>
-                <p><%= book.bookprice %></p>
-                <p><%= book.authorname %></p>
-                <p><%= book.bookquantity %></p>s
-                <p><%= book.bookcategory %></p>
-                <a href="/delete/<%= book._id  %>">delete</a> 
-                <a href="/update/<%= book._id %>">Update</a>
-            </div>
+                <div class="card d-flex flex-column align-items-center gap-0 p-6" style="width: 16rem; height:35rem">
+                    <img src="/images/<%= book.image %>" class="card-img-top" alt="book image">
+                    <div class="card-body">
+                      <h5 class="card-title">Book</h5>
+                      <p><%= book.bookname %></p>
+                      <p><%= book.bookprice %></p>
+                      <p><%= book.authorname %></p>
+                      <p><%= book.bookquantity %></p>
+                      <p><%= book.bookcategory %></p>
+                      <a href="/delete/<%= book._id  %>" class="btn btn-primary">delete</a>
+                      <a href="/update/<%= book._id  %>" class="btn btn-primary">update</a>
+                    </div>
+                </div>
         <% }) %>
 </div>
 
