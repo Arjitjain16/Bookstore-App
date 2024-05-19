@@ -2,8 +2,8 @@
 
 <div class="library-container">
         <% books.forEach((book , index) => { %>
-                <div class="card d-flex flex-column align-items-center gap-0 p-6" style="width: 16rem; height:35rem">
-                    <img src="/images/<%= book.image %>" class="card-img-top" alt="book image">
+                <div class="card d-flex flex-column align-items-center gap-0    p-6" style="width: 16rem; min-height:40rem">
+                    <img  width="100" src="/images/<%= book.image %>" class="card-img-top" alt="book image">
                     <div class="card-body">
                       <h5 class="card-title">Book</h5>
                       <p><%= book.bookname %></p>
